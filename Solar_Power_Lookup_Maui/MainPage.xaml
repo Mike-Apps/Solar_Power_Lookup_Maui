@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Solar_Power_Lookup_Maui.MainPage"
+             xmlns:model="clr-namespace:Solar_Power_Lookup_Maui.Model"
+             xmlns:viewmodel ="clr-namespace:Solar_Power_Lookup_Maui.Views"
+             x:DataType="viewmodel:SolarDataMain"
+             BackgroundColor="LightGray">
+
+    <Grid
+        ColumnDefinitions="*,*"
+        ColumnSpacing="5"
+        RowDefinitions="*,Auto"
+        RowSpacing="0">
+        <RefreshView
+            Command="{Binding GetStatesCommand}"
+            IsRefreshing="{Binding IsRefreshing}">
+            <CollectionView 
+                ItemsSource="{Binding solarmodel_observablecollection}"
+                SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:SolarModel">
+                        <Grid Padding="10">
+                            <Frame HeightRequest="60" Style="{StaticResource CardView}">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:BaseViewModel}}, Path=GetCityCommand}"
+                                        CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+                                <Grid Padding="0" ColumnDefinitions="*" >
+                                    <VerticalStackLayout
+                                        Grid.Column="0"
+                                        Padding="15">
+                                        <Label Style="{StaticResource LargeLabel}" Text="{Binding State}" />
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+
+
+        <RefreshView             
+            Command="{Binding GetCityCommand}"
+            IsRefreshing="{Binding IsRefreshing}"
+            Grid.Column="1">
+            <CollectionView 
+                ItemsSource="{Binding solarcity_observablecollection}"
+                SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:SolarModel">
+                        <Grid Padding="10">
+                        <Frame HeightRequest="60" Style="{StaticResource CardView}" >
+                        <Grid Padding="10" ColumnDefinitions="*">
+                            
+                            <VerticalStackLayout 
+                                Grid.Column="1"
+                                Padding="0">
+                                <Label Style="{StaticResource MediumLabel}" Text="{Binding City}" ></Label>
+                                
+                            </VerticalStackLayout>
+                        </Grid>
+                        </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                
+            </CollectionView>
+            
+        </RefreshView>
+
+        
+
+        <Button Text="Populate States" 
+                Command="{Binding GetStatesCommand}"
+                Grid.Row="1"
+                IsEnabled="{Binding IsNotBusy}"
+                Grid.Column="0"
+                Style="{StaticResource ButtonOutline}"
+                Margin="8"/>
+        
+
+
+        <!--<Button Text="Test Page" 
+                Command="{Binding GoToTestPageCommand}"
+                Grid.Row="1"
+                IsEnabled="{Binding IsNotBusy}"
+                Grid.Column="1"
+                Style="{StaticResource ButtonOutline}"
+                Margin="8"/>-->
+
+        <ActivityIndicator
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="FillAndExpand"
+            IsRunning="{Binding IsBusy}"
+            IsVisible="{Binding IsRefreshing}"
+            VerticalOptions="CenterAndExpand" />
+
+    </Grid>
+
+
+</ContentPage>
