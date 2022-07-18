@@ -17,6 +17,8 @@ namespace Solar_Power_Lookup_Maui.Views
         {
             this.solarServices = solarServices;
             this.solarCity = solarCity;
+            
+
         }
 
         [ObservableProperty]
@@ -24,7 +26,7 @@ namespace Solar_Power_Lookup_Maui.Views
 
         //explore JSON and populate states to solarmodel_observablecollection 
         [ICommand]
-        async Task GetStatesAsync()
+       async Task GetStatesAsync()
         {
             if (IsBusy)
                 return;
@@ -65,6 +67,7 @@ namespace Solar_Power_Lookup_Maui.Views
             {
                 IsBusy = false;
                 IsRefreshing = false;
+                
            
             }
         }

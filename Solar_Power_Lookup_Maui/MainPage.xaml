@@ -73,7 +73,7 @@
 
         
 
-        <Button Text="Populate States" 
+        <Button Text="Refresh States" 
                 Command="{Binding GetStatesCommand}"
                 Grid.Row="1"
                 IsEnabled="{Binding IsNotBusy}"

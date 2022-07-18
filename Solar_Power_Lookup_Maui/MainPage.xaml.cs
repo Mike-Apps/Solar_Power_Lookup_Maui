@@ -8,6 +8,9 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         BindingContext = viewmodel;
+        viewmodel.GetStatesCommand.Execute(this);
+
+        
     }
 
     
