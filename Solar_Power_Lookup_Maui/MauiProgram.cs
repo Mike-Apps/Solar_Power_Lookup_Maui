@@ -18,6 +18,11 @@ public static class MauiProgram
         builder.Services.AddSingleton<MainPage>();
         builder.Services.AddSingleton<SolarDataMain>();
 
+
+        //Add pages and classes associated with additional pages here
+        builder.Services.AddTransient<SolarDetailsViewModel>();
+        builder.Services.AddTransient<SolarDetailsPage>();
+
         return builder.Build();
     }
 }

@@ -53,8 +53,12 @@
                     <DataTemplate x:DataType="model:SolarModel">
                         <Grid Padding="10">
                         <Frame HeightRequest="60" Style="{StaticResource CardView}" >
-                        <Grid Padding="10" ColumnDefinitions="*">
-                            
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:BaseViewModel}}, Path=GoToDetailsCommand}"
+                                        CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+                                <Grid Padding="10" ColumnDefinitions="*">
                             <VerticalStackLayout 
                                 Grid.Column="1"
                                 Padding="0">
@@ -73,13 +77,13 @@
 
         
 
-        <Button Text="Refresh States" 
+        <!--<Button Text="Refresh States" 
                 Command="{Binding GetStatesCommand}"
                 Grid.Row="1"
                 IsEnabled="{Binding IsNotBusy}"
                 Grid.Column="0"
                 Style="{StaticResource ButtonOutline}"
-                Margin="8"/>
+                Margin="8"/>-->
         
 
 

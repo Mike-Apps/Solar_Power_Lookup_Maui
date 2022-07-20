@@ -17,8 +17,6 @@ namespace Solar_Power_Lookup_Maui.Views
         {
             this.solarServices = solarServices;
             this.solarCity = solarCity;
-            
-
         }
 
         [ObservableProperty]
@@ -36,16 +34,12 @@ namespace Solar_Power_Lookup_Maui.Views
             {
                 IsBusy = true;
                 var solar = await solarServices.GetSolar();
-
                 solar.Sort((p, q) => p.State.CompareTo(q.State));
-            
 
                 if (solarmodel_observablecollection.Count != 0)
                 {
                     solarmodel_observablecollection.Clear();
                 }
-
-
 
                 foreach (var sol in solar)
                 {
@@ -57,8 +51,6 @@ namespace Solar_Power_Lookup_Maui.Views
                     }
                 }
             }
-
-
             catch (Exception ex)
             {
                 await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
@@ -86,7 +78,6 @@ namespace Solar_Power_Lookup_Maui.Views
             {
                 IsBusy = true;
                 var solarCity = await solarServices.GetSolar();
-
                 solarCity.Sort((p, q) => p.City.CompareTo(q.City));
 
                 if (solarcity_observablecollection.Count != 0)
@@ -112,6 +103,18 @@ namespace Solar_Power_Lookup_Maui.Views
                 IsRefreshing = false;
 
             }
+        }
+
+        //navigate to the details page and push the solarModel object to the details page.
+        [ICommand]
+        async Task GoToDetails(SolarModel solarModel)
+        {
+            if (solarModel == null)
+            {
+                return;
+            }
+
+            await Shell.Current.GoToAsync(nameof(SolarDetailsPage), true, new Dictionary<string, object> { { "SolarModel", solarModel } });
         }
     }
 }
