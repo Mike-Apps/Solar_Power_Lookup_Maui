@@ -1,7 +1,7 @@
 ﻿
 namespace Solar_Power_Lookup_Maui.Views
 {
-    public partial class BaseViewModel: ObservableObject
+    public partial class BaseViewModel : ObservableObject
     {
         [ObservableProperty]
         //[NotifyPropertyChangedFor(nameof(IsNotBusy))]

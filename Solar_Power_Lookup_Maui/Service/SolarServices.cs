@@ -1,9 +1,4 @@
-﻿using Solar_Power_Lookup_Maui.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text.Json;
 
 namespace Solar_Power_Lookup_Maui.Service
 {
@@ -22,7 +17,7 @@ namespace Solar_Power_Lookup_Maui.Service
         List<SolarModel> solarModels;
         public async Task<List<SolarModel>> GetSolar()
         {
-            if (solarModels?.Count>0)
+            if (solarModels?.Count > 0)
             {
                 return solarModels;
             }

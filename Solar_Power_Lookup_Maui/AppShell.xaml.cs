@@ -7,6 +7,6 @@ public partial class AppShell : Shell
         InitializeComponent();
 
         //routing registration for xaml pages...
-        Routing.RegisterRoute(nameof(SolarDetailsPage),typeof(SolarDetailsPage));
+        Routing.RegisterRoute(nameof(SolarDetailsPage), typeof(SolarDetailsPage));
     }
 }

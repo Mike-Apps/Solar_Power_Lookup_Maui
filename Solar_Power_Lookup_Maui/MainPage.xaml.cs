@@ -2,7 +2,7 @@
 
 public partial class MainPage : ContentPage
 {
-   
+
 
     public MainPage(SolarDataMain viewmodel)
     {
@@ -10,9 +10,9 @@ public partial class MainPage : ContentPage
         BindingContext = viewmodel;
         viewmodel.GetStatesCommand.Execute(this);
 
-        
+
     }
 
-    
+
 }
 

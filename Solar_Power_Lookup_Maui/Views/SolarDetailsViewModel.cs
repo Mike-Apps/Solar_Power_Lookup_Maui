@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Solar_Power_Lookup_Maui.Views
+﻿namespace Solar_Power_Lookup_Maui.Views
 {
     [QueryProperty(nameof(SolarModel), "SolarModel")]
-    public partial class SolarDetailsViewModel: BaseViewModel
+    public partial class SolarDetailsViewModel : BaseViewModel
     {
         public SolarDetailsViewModel()
         {

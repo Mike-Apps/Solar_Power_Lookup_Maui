@@ -1,7 +1,30 @@
-﻿using System.Collections.ObjectModel;
+﻿
+/* Unmerged change from project 'Solar_Power_Lookup_Maui (net6.0-windows10.0.19041.0)'
+Before:
+using System.Collections.ObjectModel;
 using Solar_Power_Lookup_Maui.Model;
+After:
+using Solar_Power_Lookup_Maui.Model;
+using System.Collections.ObjectModel;
+*/
 
+/* Unmerged change from project 'Solar_Power_Lookup_Maui (net6.0-maccatalyst)'
+Before:
+using System.Collections.ObjectModel;
+using Solar_Power_Lookup_Maui.Model;
+After:
+using Solar_Power_Lookup_Maui.Model;
+using System.Collections.ObjectModel;
+*/
 
+/* Unmerged change from project 'Solar_Power_Lookup_Maui (net6.0-ios)'
+Before:
+using System.Collections.ObjectModel;
+using Solar_Power_Lookup_Maui.Model;
+After:
+using Solar_Power_Lookup_Maui.Model;
+using System.Collections.ObjectModel;
+*/
 namespace Solar_Power_Lookup_Maui.Views
 {
     public partial class SolarDataMain : BaseViewModel
@@ -12,7 +35,7 @@ namespace Solar_Power_Lookup_Maui.Views
 
         SolarServices solarServices;
         SolarServices solarCity;
-     
+
         public SolarDataMain(SolarServices solarServices, SolarServices solarCity)
         {
             this.solarServices = solarServices;
@@ -24,11 +47,11 @@ namespace Solar_Power_Lookup_Maui.Views
 
         //explore JSON and populate states to solarmodel_observablecollection 
         [ICommand]
-       async Task GetStatesAsync()
+        async Task GetStatesAsync()
         {
             if (IsBusy)
                 return;
-            Dictionary<string,string> dict = new Dictionary<string,string>();
+            Dictionary<string, string> dict = new Dictionary<string, string>();
 
             try
             {
@@ -47,7 +70,7 @@ namespace Solar_Power_Lookup_Maui.Views
                     {
                         dict.Add(sol.State, sol.State);
                         solarmodel_observablecollection.Add(sol);
-                       
+
                     }
                 }
             }
@@ -59,8 +82,8 @@ namespace Solar_Power_Lookup_Maui.Views
             {
                 IsBusy = false;
                 IsRefreshing = false;
-                
-           
+
+
             }
         }
 
