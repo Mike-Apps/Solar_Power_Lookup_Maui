@@ -10,7 +10,6 @@ public partial class MainPage : ContentPage
         BindingContext = viewmodel;
         viewmodel.GetStatesCommand.Execute(this);
 
-
     }
 
 

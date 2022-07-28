@@ -198,6 +198,7 @@
         public int Dec1900 { get; set; }
         public int Dec2000 { get; set; }
         public int DecAverage { get; set; }
+
     }
 }
 

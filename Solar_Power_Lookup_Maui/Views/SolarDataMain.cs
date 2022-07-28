@@ -68,6 +68,7 @@ namespace Solar_Power_Lookup_Maui.Views
                 {
                     if (!dict.ContainsKey(sol.State))
                     {
+     
                         dict.Add(sol.State, sol.State);
                         solarmodel_observablecollection.Add(sol);
 

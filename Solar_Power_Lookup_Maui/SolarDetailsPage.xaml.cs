@@ -2,27 +2,27 @@ namespace Solar_Power_Lookup_Maui;
 
 public partial class SolarDetailsPage : ContentPage
 {
+    
 
     public SolarDetailsPage(SolarDetailsViewModel viewModel)
     {
         InitializeComponent();
         BindingContext = viewModel;
-
     }
 
-    [Obsolete]
+        [Obsolete]
     private void Button_Clicked(object sender, EventArgs e)
     {
 
         int high = 0;
-        int numberOfLabels = 24;
+        int numberOfLabels = 180;
         //data1.Background = Color.FromHex("#FFA000");
 
         for (int i = 1; i <= numberOfLabels; i++)
         {
             //use textLabel to access each Label
-            var textLabel = string.Format($"label{i}");
-            var txtLabel = (Label)this.FindByName(textLabel);
+            string textLabel = string.Format($"label{i}");
+            Label txtLabel = (Label)this.FindByName(textLabel);
 
             //Identify the highest recorded power measurement
             if (Convert.ToInt32(txtLabel.Text) > high)
@@ -49,45 +49,44 @@ public partial class SolarDetailsPage : ContentPage
             var textLabel = string.Format($"label{i}");
             var txtLabel = (Label)this.FindByName(textLabel);
 
-            if (Convert.ToInt32(txtLabel.Text) >= high * .9)
+            //color codes availble from https://www.w3schools.com/colors/colors_picker.asp
+
+            //violet
+            if (Convert.ToInt32(txtLabel.Text) == high)
             {
-                frame.Background = Color.FromHex("#9999ff");
+                frame.Background = Color.FromRgba("#cc80ff");
             }
 
-            else if (Convert.ToInt32(txtLabel.Text) >= high * .85)
+            //light blue
+            else if (Convert.ToInt32(txtLabel.Text) >= high * .8)
             {
-                frame.Background = Color.FromHex("#cce0ff");
+                frame.Background = Color.FromHex("#99ccff");
             }
 
-            else if (Convert.ToInt32(txtLabel.Text) >= high * .80)
+            //light green
+            else if (Convert.ToInt32(txtLabel.Text) >= high * .7)
             {
-                frame.Background = Color.FromHex("#4dffb8");
+                frame.Background = Color.FromHex("#66ff33");
             }
 
-            else if (Convert.ToInt32(txtLabel.Text) >= high * .75)
-            {
-                frame.Background = Color.FromHex("#d9ffcc");
-            }
-
-            else if (Convert.ToInt32(txtLabel.Text) >= high * .70)
-            {
-                frame.Background = Color.FromHex("#ffe066");
-            }
-
-            else if (Convert.ToInt32(txtLabel.Text) >= high * .6)
-            {
-                frame.Background = Color.FromHex("#ffc299");
-            }
-
+            //light orange
             else if (Convert.ToInt32(txtLabel.Text) >= high * .5)
             {
-                frame.Background = Color.FromHex("#ff4d94");
+                frame.Background = Color.FromHex("#ffeb99");
             }
 
-            else
+            //light red
+            else if (Convert.ToInt32(txtLabel.Text) >= high * .3)
             {
-                frame.Background = Color.FromHex("#ff6666");
+                frame.Background = Color.FromHex("#ff8080");
             }
+
+            //darker red
+            else if (Convert.ToInt32(txtLabel.Text) > 0)
+            {
+                frame.Background = Color.FromHex("#ff1a1a");
+            }
+            
         }
 
     }

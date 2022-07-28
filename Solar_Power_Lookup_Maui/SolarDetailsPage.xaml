@@ -3,16 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Solar_Power_Lookup_Maui.SolarDetailsPage"
              Title="SolarDetailsPage"
+
              BackgroundColor="LightGray">
 
 
-    <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-        <VerticalStackLayout>
-            <VerticalStackLayout Padding="10" Spacing="10">
+    <ScrollView  Orientation="Both" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <VerticalStackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <VerticalStackLayout Padding="10" Spacing="10"  >
                 
-                <Grid ColumnDefinitions="auto,400,105,105" RowDefinitions="25,25" Margin="0">
-                    <Frame Margin="0,0,0,0" Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="0" WidthRequest="50" >
-                        <Label  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.State }" WidthRequest="50"/>
+                <Grid ColumnDefinitions="auto,350,105,105" RowDefinitions="25,25" Margin="0" >
+                    <Frame Margin="0,0,0,0" Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="0" WidthRequest="100" >
+                        <Label  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.State }" WidthRequest="100"/>
                     </Frame>
 
                     <Frame  Margin="0,0,0,0" Style="{StaticResource CardView}" Grid.Column="1"  Grid.Row="0">
@@ -32,11 +33,10 @@
                     </Frame>
                     
                 </Grid>
-                
 
                
                 
-                <Grid ColumnDefinitions="50,50,50,50,50,50,50,50,50,50,50,50,50" RowDefinitions="25,25,25,25" Padding="5">
+                <Grid ColumnDefinitions="50,50,50,50,50,50,50,50,50,50,50,50,50" RowDefinitions="25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25" Padding="5">
                     <!--MONTH LAYOUT-->
                     <!--#region NewRegion -->
                  
@@ -80,7 +80,6 @@
                     <!--#endregion-->
 
                     <!--TIME LAYOUT-->
-                    
                     <!--0600-->
                     <!--#region NewRegion -->
                     <Frame Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="1">
@@ -124,8 +123,8 @@
                     </Frame>
                     <!--#endregion-->
 
-
                     <!--0700-->
+                    <!--#region NewRegion -->
                     <Frame  Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="2">
                         <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="0700"/>
                     </Frame>
@@ -165,14 +164,584 @@
                     <Frame x:Name="data24" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="12"  Grid.Row="2">
                         <Label x:Name="label24" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Dec0700 }"/>
                     </Frame>
+                    <!--#endregion-->
+
+                    <!--0800-->
+                    <!--#region NewRegion -->
+                    <Frame  Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="3">
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="0800"/>
+                    </Frame>
+                    <Frame x:Name="data25" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="1"  Grid.Row="3">
+                        <Label x:Name="label25" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jan0800 }"/>
+                    </Frame>
+                    <Frame x:Name="data26" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="2"  Grid.Row="3">
+                        <Label x:Name="label26" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Feb0800 }"/>
+                    </Frame>
+                    <Frame x:Name="data27" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="3"  Grid.Row="3">
+                        <Label x:Name="label27" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Mar0800 }"/>
+                    </Frame>
+                    <Frame x:Name="data28" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="4"  Grid.Row="3">
+                        <Label x:Name="label28" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Apr0800 }"/>
+                    </Frame>
+                    <Frame x:Name="data29" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="5"  Grid.Row="3">
+                        <Label x:Name="label29" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.May0800 }"/>
+                    </Frame>
+                    <Frame x:Name="data30" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="6"  Grid.Row="3">
+                        <Label x:Name="label30" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jun0800 }"/>
+                    </Frame>
+                    <Frame x:Name="data31" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="7"  Grid.Row="3">
+                        <Label x:Name="label31" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jul0800 }"/>
+                    </Frame>
+                    <Frame x:Name="data32" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="8"  Grid.Row="3">
+                        <Label x:Name="label32" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Aug0800 }"/>
+                    </Frame>
+                    <Frame x:Name="data33" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="9"  Grid.Row="3">
+                        <Label x:Name="label33" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Sep0800 }"/>
+                    </Frame>
+                    <Frame x:Name="data34" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="10"  Grid.Row="3">
+                        <Label x:Name="label34" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Oct0800 }"/>
+                    </Frame>
+                    <Frame x:Name="data35" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="11"  Grid.Row="3">
+                        <Label x:Name="label35" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Nov0800 }"/>
+                    </Frame>
+                    <Frame x:Name="data36" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="12"  Grid.Row="3">
+                        <Label x:Name="label36" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Dec0800 }"/>
+                    </Frame>
+                    <!--#endregion-->
+
+                    <!--0900-->
+                    <!--#region NewRegion -->
+                    <Frame  Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="4">
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="0900"/>
+                    </Frame>
+                    <Frame x:Name="data37" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="1"  Grid.Row="4">
+                        <Label x:Name="label37" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jan0900 }"/>
+                    </Frame>
+                    <Frame x:Name="data38" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="2"  Grid.Row="4">
+                        <Label x:Name="label38" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Feb0900 }"/>
+                    </Frame>
+                    <Frame x:Name="data39" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="3"  Grid.Row="4">
+                        <Label x:Name="label39" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Mar0900 }"/>
+                    </Frame>
+                    <Frame x:Name="data40" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="4"  Grid.Row="4">
+                        <Label x:Name="label40" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Apr0900 }"/>
+                    </Frame>
+                    <Frame x:Name="data41" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="5"  Grid.Row="4">
+                        <Label x:Name="label41" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.May0900 }"/>
+                    </Frame>
+                    <Frame x:Name="data42" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="6"  Grid.Row="4">
+                        <Label x:Name="label42" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jun0900 }"/>
+                    </Frame>
+                    <Frame x:Name="data43" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="7"  Grid.Row="4">
+                        <Label x:Name="label43" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jul0900 }"/>
+                    </Frame>
+                    <Frame x:Name="data44" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="8"  Grid.Row="4">
+                        <Label x:Name="label44" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Aug0900 }"/>
+                    </Frame>
+                    <Frame x:Name="data45" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="9"  Grid.Row="4">
+                        <Label x:Name="label45" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Sep0900 }"/>
+                    </Frame>
+                    <Frame x:Name="data46" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="10"  Grid.Row="4">
+                        <Label x:Name="label46" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Oct0900 }"/>
+                    </Frame>
+                    <Frame x:Name="data47" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="11"  Grid.Row="4">
+                        <Label x:Name="label47" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Nov0900 }"/>
+                    </Frame>
+                    <Frame x:Name="data48" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="12"  Grid.Row="4">
+                        <Label x:Name="label48" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Dec0900 }"/>
+                    </Frame>
+                    <!--#endregion-->
+
+
+                    <!--1000-->
+                    <!--#region NewRegion -->
+                    <Frame  Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="5">
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="1000"/>
+                    </Frame>
+                    <Frame x:Name="data49" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="1"  Grid.Row="5">
+                        <Label x:Name="label49" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jan1000 }"/>
+                    </Frame>
+                    <Frame x:Name="data50" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="2"  Grid.Row="5">
+                        <Label x:Name="label50" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Feb1000 }"/>
+                    </Frame>
+                    <Frame x:Name="data51" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="3"  Grid.Row="5">
+                        <Label x:Name="label51" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Mar1000 }"/>
+                    </Frame>
+                    <Frame x:Name="data52" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="4"  Grid.Row="5">
+                        <Label x:Name="label52" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Apr1000 }"/>
+                    </Frame>
+                    <Frame x:Name="data53" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="5"  Grid.Row="5">
+                        <Label x:Name="label53" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.May1000 }"/>
+                    </Frame>
+                    <Frame x:Name="data54" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="6"  Grid.Row="5">
+                        <Label x:Name="label54" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jun1000 }"/>
+                    </Frame>
+                    <Frame x:Name="data55" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="7"  Grid.Row="5">
+                        <Label x:Name="label55" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jul1000 }"/>
+                    </Frame>
+                    <Frame x:Name="data56" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="8"  Grid.Row="5">
+                        <Label x:Name="label56" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Aug1000 }"/>
+                    </Frame>
+                    <Frame x:Name="data57" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="9"  Grid.Row="5">
+                        <Label x:Name="label57" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Sep1000 }"/>
+                    </Frame>
+                    <Frame x:Name="data58" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="10"  Grid.Row="5">
+                        <Label x:Name="label58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Oct1000 }"/>
+                    </Frame>
+                    <Frame x:Name="data59" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="11"  Grid.Row="5">
+                        <Label x:Name="label59" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Nov1000 }"/>
+                    </Frame>
+                    <Frame x:Name="data60" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="12"  Grid.Row="5">
+                        <Label x:Name="label60" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Dec1000 }"/>
+                    </Frame>
+                    <!--#endregion-->
+
+                    <!--1100-->
+                    <!--#region NewRegion -->
+                    <Frame  Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="6">
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="1100"/>
+                    </Frame>
+                    <Frame x:Name="data61" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="1"  Grid.Row="6">
+                        <Label x:Name="label61" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jan1100 }"/>
+                    </Frame>
+                    <Frame x:Name="data62" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="2"  Grid.Row="6">
+                        <Label x:Name="label62" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Feb1100 }"/>
+                    </Frame>
+                    <Frame x:Name="data63" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="3"  Grid.Row="6">
+                        <Label x:Name="label63" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Mar1100 }"/>
+                    </Frame>
+                    <Frame x:Name="data64" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="4"  Grid.Row="6">
+                        <Label x:Name="label64" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Apr1100 }"/>
+                    </Frame>
+                    <Frame x:Name="data65" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="5"  Grid.Row="6">
+                        <Label x:Name="label65" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.May1100 }"/>
+                    </Frame>
+                    <Frame x:Name="data66" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="6"  Grid.Row="6">
+                        <Label x:Name="label66" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jun1100 }"/>
+                    </Frame>
+                    <Frame x:Name="data67" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="7"  Grid.Row="6">
+                        <Label x:Name="label67" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jul1100 }"/>
+                    </Frame>
+                    <Frame x:Name="data68" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="8"  Grid.Row="6">
+                        <Label x:Name="label68" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Aug1100 }"/>
+                    </Frame>
+                    <Frame x:Name="data69" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="9"  Grid.Row="6">
+                        <Label x:Name="label69" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Sep1100 }"/>
+                    </Frame>
+                    <Frame x:Name="data70" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="10"  Grid.Row="6">
+                        <Label x:Name="label70" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Oct1100 }"/>
+                    </Frame>
+                    <Frame x:Name="data71" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="11"  Grid.Row="6">
+                        <Label x:Name="label71" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Nov1100 }"/>
+                    </Frame>
+                    <Frame x:Name="data72" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="12"  Grid.Row="6">
+                        <Label x:Name="label72" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Dec1100 }"/>
+                    </Frame>
+                    <!--#endregion-->
+
+                    <!--1200-->
+                    <!--#region NewRegion -->
+                    <Frame  Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="7">
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="1200"/>
+                    </Frame>
+                    <Frame x:Name="data73" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="1"  Grid.Row="7">
+                        <Label x:Name="label73" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jan1200 }"/>
+                    </Frame>
+                    <Frame x:Name="data74" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="2"  Grid.Row="7">
+                        <Label x:Name="label74" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Feb1200 }"/>
+                    </Frame>
+                    <Frame x:Name="data75" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="3"  Grid.Row="7">
+                        <Label x:Name="label75" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Mar1200 }"/>
+                    </Frame>
+                    <Frame x:Name="data76" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="4"  Grid.Row="7">
+                        <Label x:Name="label76" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Apr1200 }"/>
+                    </Frame>
+                    <Frame x:Name="data77" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="5"  Grid.Row="7">
+                        <Label x:Name="label77" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.May1200 }"/>
+                    </Frame>
+                    <Frame x:Name="data78" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="6"  Grid.Row="7">
+                        <Label x:Name="label78" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jun1200 }"/>
+                    </Frame>
+                    <Frame x:Name="data79" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="7"  Grid.Row="7">
+                        <Label x:Name="label79" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jul1200 }"/>
+                    </Frame>
+                    <Frame x:Name="data80" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="8"  Grid.Row="7">
+                        <Label x:Name="label80" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Aug1200 }"/>
+                    </Frame>
+                    <Frame x:Name="data81" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="9"  Grid.Row="7">
+                        <Label x:Name="label81" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Sep1200 }"/>
+                    </Frame>
+                    <Frame x:Name="data82" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="10"  Grid.Row="7">
+                        <Label x:Name="label82" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Oct1200 }"/>
+                    </Frame>
+                    <Frame x:Name="data83" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="11"  Grid.Row="7">
+                        <Label x:Name="label83" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Nov1200 }"/>
+                    </Frame>
+                    <Frame x:Name="data84" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="12"  Grid.Row="7">
+                        <Label x:Name="label84" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Dec1200 }"/>
+                    </Frame>
+                    <!--#endregion-->
+                    
+                    <!--1300-->
+
+                    <!--#region NewRegion -->
+                    <Frame  Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="8">
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="1300"/>
+                    </Frame>
+                    <Frame x:Name="data85" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="1"  Grid.Row="8">
+                        <Label x:Name="label85" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jan1300 }"/>
+                    </Frame>
+                    <Frame x:Name="data86" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="2"  Grid.Row="8">
+                        <Label x:Name="label86" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Feb1300 }"/>
+                    </Frame>
+                    <Frame x:Name="data87" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="3"  Grid.Row="8">
+                        <Label x:Name="label87" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Mar1300 }"/>
+                    </Frame>
+                    <Frame x:Name="data88" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="4"  Grid.Row="8">
+                        <Label x:Name="label88" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Apr1300 }"/>
+                    </Frame>
+                    <Frame x:Name="data89" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="5"  Grid.Row="8">
+                        <Label x:Name="label89" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.May1300 }"/>
+                    </Frame>
+                    <Frame x:Name="data90" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="6"  Grid.Row="8">
+                        <Label x:Name="label90" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jun1300 }"/>
+                    </Frame>
+                    <Frame x:Name="data91" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="7"  Grid.Row="8">
+                        <Label x:Name="label91" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jul1300 }"/>
+                    </Frame>
+                    <Frame x:Name="data92" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="8"  Grid.Row="8">
+                        <Label x:Name="label92" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Aug1300 }"/>
+                    </Frame>
+                    <Frame x:Name="data93" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="9"  Grid.Row="8">
+                        <Label x:Name="label93" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Sep1300 }"/>
+                    </Frame>
+                    <Frame x:Name="data94" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="10"  Grid.Row="8">
+                        <Label x:Name="label94" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Oct1300 }"/>
+                    </Frame>
+                    <Frame x:Name="data95" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="11"  Grid.Row="8">
+                        <Label x:Name="label95" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Nov1300 }"/>
+                    </Frame>
+                    <Frame x:Name="data96" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="12"  Grid.Row="8">
+                        <Label x:Name="label96" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Dec1300 }"/>
+                    </Frame>
+                    <!--#endregion-->
+
+                    <!--1400-->
+                    <!--#region NewRegion -->
+                    <Frame  Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="9">
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="1400"/>
+                    </Frame>
+                    <Frame x:Name="data97" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="1"  Grid.Row="9">
+                        <Label x:Name="label97" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jan1400 }"/>
+                    </Frame>
+                    <Frame x:Name="data98" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="2"  Grid.Row="9">
+                        <Label x:Name="label98" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Feb1400 }"/>
+                    </Frame>
+                    <Frame x:Name="data99" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="3"  Grid.Row="9">
+                        <Label x:Name="label99" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Mar1400 }"/>
+                    </Frame>
+                    <Frame x:Name="data100" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="4"  Grid.Row="9">
+                        <Label x:Name="label100" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Apr1400 }"/>
+                    </Frame>
+                    <Frame x:Name="data101" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="5"  Grid.Row="9">
+                        <Label x:Name="label101" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.May1400 }"/>
+                    </Frame>
+                    <Frame x:Name="data102" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="6"  Grid.Row="9">
+                        <Label x:Name="label102" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jun1400 }"/>
+                    </Frame>
+                    <Frame x:Name="data103" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="7"  Grid.Row="9">
+                        <Label x:Name="label103" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jul1400 }"/>
+                    </Frame>
+                    <Frame x:Name="data104" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="8"  Grid.Row="9">
+                        <Label x:Name="label104" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Aug1400 }"/>
+                    </Frame>
+                    <Frame x:Name="data105" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="9"  Grid.Row="9">
+                        <Label x:Name="label105" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Sep1400 }"/>
+                    </Frame>
+                    <Frame x:Name="data106" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="10"  Grid.Row="9">
+                        <Label x:Name="label106" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Oct1400 }"/>
+                    </Frame>
+                    <Frame x:Name="data107" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="11"  Grid.Row="9">
+                        <Label x:Name="label107" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Nov1400 }"/>
+                    </Frame>
+                    <Frame x:Name="data108" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="12"  Grid.Row="9">
+                        <Label x:Name="label108" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Dec1400 }"/>
+                    </Frame>
+                    <!--#endregion-->
+
+
+                    <!--1500-->
+                    <!--#region NewRegion -->
+                    <Frame  Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="10">
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="1500"/>
+                    </Frame>
+                    <Frame x:Name="data109" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="1"  Grid.Row="10">
+                        <Label x:Name="label109" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jan1500 }"/>
+                    </Frame>
+                    <Frame x:Name="data110" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="2"  Grid.Row="10">
+                        <Label x:Name="label110" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Feb1500 }"/>
+                    </Frame>
+                    <Frame x:Name="data111" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="3"  Grid.Row="10">
+                        <Label x:Name="label111" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Mar1500 }"/>
+                    </Frame>
+                    <Frame x:Name="data112" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="4"  Grid.Row="10">
+                        <Label x:Name="label112" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Apr1500 }"/>
+                    </Frame>
+                    <Frame x:Name="data113" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="5"  Grid.Row="10">
+                        <Label x:Name="label113" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.May1500 }"/>
+                    </Frame>
+                    <Frame x:Name="data114" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="6"  Grid.Row="10">
+                        <Label x:Name="label114" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jun1500 }"/>
+                    </Frame>
+                    <Frame x:Name="data115" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="7"  Grid.Row="10">
+                        <Label x:Name="label115" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jul1500 }"/>
+                    </Frame>
+                    <Frame x:Name="data116" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="8"  Grid.Row="10">
+                        <Label x:Name="label116" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Aug1500 }"/>
+                    </Frame>
+                    <Frame x:Name="data117" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="9"  Grid.Row="10">
+                        <Label x:Name="label117" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Sep1500 }"/>
+                    </Frame>
+                    <Frame x:Name="data118" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="10"  Grid.Row="10">
+                        <Label x:Name="label118" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Oct1500 }"/>
+                    </Frame>
+                    <Frame x:Name="data119" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="11"  Grid.Row="10">
+                        <Label x:Name="label119" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Nov1500 }"/>
+                    </Frame>
+                    <Frame x:Name="data120" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="12"  Grid.Row="10">
+                        <Label x:Name="label120" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Dec1500 }"/>
+                    </Frame>
+                    <!--#endregion-->
+
+                    <!--1600-->
+                    <!--#region NewRegion -->
+                    <Frame  Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="11">
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="1600"/>
+                    </Frame>
+                    <Frame x:Name="data121" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="1"  Grid.Row="11">
+                        <Label x:Name="label121" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jan1600 }"/>
+                    </Frame>
+                    <Frame x:Name="data122" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="2"  Grid.Row="11">
+                        <Label x:Name="label122" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Feb1600 }"/>
+                    </Frame>
+                    <Frame x:Name="data123" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="3"  Grid.Row="11">
+                        <Label x:Name="label123" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Mar1600 }"/>
+                    </Frame>
+                    <Frame x:Name="data124" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="4"  Grid.Row="11">
+                        <Label x:Name="label124" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Apr1600 }"/>
+                    </Frame>
+                    <Frame x:Name="data125" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="5"  Grid.Row="11">
+                        <Label x:Name="label125" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.May1600 }"/>
+                    </Frame>
+                    <Frame x:Name="data126" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="6"  Grid.Row="11">
+                        <Label x:Name="label126" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jun1600 }"/>
+                    </Frame>
+                    <Frame x:Name="data127" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="7"  Grid.Row="11">
+                        <Label x:Name="label127" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jul1600 }"/>
+                    </Frame>
+                    <Frame x:Name="data128" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="8"  Grid.Row="11">
+                        <Label x:Name="label128" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Aug1600 }"/>
+                    </Frame>
+                    <Frame x:Name="data129" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="9"  Grid.Row="11">
+                        <Label x:Name="label129" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Sep1600 }"/>
+                    </Frame>
+                    <Frame x:Name="data130" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="10"  Grid.Row="11">
+                        <Label x:Name="label130" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Oct1600 }"/>
+                    </Frame>
+                    <Frame x:Name="data131" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="11"  Grid.Row="11">
+                        <Label x:Name="label131" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Nov1600 }"/>
+                    </Frame>
+                    <Frame x:Name="data132" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="12"  Grid.Row="11">
+                        <Label x:Name="label132" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Dec1600 }"/>
+                    </Frame>
+                    <!--#endregion-->
+
+                    <!--1700-->
+                    <!--#region NewRegion -->
+                    <Frame  Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="12">
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="1700"/>
+                    </Frame>
+                    <Frame x:Name="data133" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="1"  Grid.Row="12">
+                        <Label x:Name="label133" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jan1700 }"/>
+                    </Frame>
+                    <Frame x:Name="data134" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="2"  Grid.Row="12">
+                        <Label x:Name="label134" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Feb1700 }"/>
+                    </Frame>
+                    <Frame x:Name="data135" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="3"  Grid.Row="12">
+                        <Label x:Name="label135" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Mar1700 }"/>
+                    </Frame>
+                    <Frame x:Name="data136" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="4"  Grid.Row="12">
+                        <Label x:Name="label136" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Apr1700 }"/>
+                    </Frame>
+                    <Frame x:Name="data137" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="5"  Grid.Row="12">
+                        <Label x:Name="label137" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.May1700 }"/>
+                    </Frame>
+                    <Frame x:Name="data138" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="6"  Grid.Row="12">
+                        <Label x:Name="label138" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jun1700 }"/>
+                    </Frame>
+                    <Frame x:Name="data139" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="7"  Grid.Row="12">
+                        <Label x:Name="label139" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jul1700 }"/>
+                    </Frame>
+                    <Frame x:Name="data140" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="8"  Grid.Row="12">
+                        <Label x:Name="label140" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Aug1700 }"/>
+                    </Frame>
+                    <Frame x:Name="data141" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="9"  Grid.Row="12">
+                        <Label x:Name="label141" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Sep1700 }"/>
+                    </Frame>
+                    <Frame x:Name="data142" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="10"  Grid.Row="12">
+                        <Label x:Name="label142" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Oct1700 }"/>
+                    </Frame>
+                    <Frame x:Name="data143" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="11"  Grid.Row="12">
+                        <Label x:Name="label143" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Nov1700 }"/>
+                    </Frame>
+                    <Frame x:Name="data144" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="12"  Grid.Row="12">
+                        <Label x:Name="label144" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Dec1700 }"/>
+                    </Frame>
+                    <!--#endregion-->
+
+                    <!--1800-->
+                    <!--#region NewRegion -->
+                    <Frame  Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="13">
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="1800"/>
+                    </Frame>
+                    <Frame x:Name="data145" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="1"  Grid.Row="13">
+                        <Label x:Name="label145" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jan1800 }"/>
+                    </Frame>
+                    <Frame x:Name="data146" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="2"  Grid.Row="13">
+                        <Label x:Name="label146" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Feb1800 }"/>
+                    </Frame>
+                    <Frame x:Name="data147" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="3"  Grid.Row="13">
+                        <Label x:Name="label147" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Mar1800 }"/>
+                    </Frame>
+                    <Frame x:Name="data148" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="4"  Grid.Row="13">
+                        <Label x:Name="label148" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Apr1800 }"/>
+                    </Frame>
+                    <Frame x:Name="data149" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="5"  Grid.Row="13">
+                        <Label x:Name="label149" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.May1800 }"/>
+                    </Frame>
+                    <Frame x:Name="data150" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="6"  Grid.Row="13">
+                        <Label x:Name="label150" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jun1800 }"/>
+                    </Frame>
+                    <Frame x:Name="data151" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="7"  Grid.Row="13">
+                        <Label x:Name="label151" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jul1800 }"/>
+                    </Frame>
+                    <Frame x:Name="data152" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="8"  Grid.Row="13">
+                        <Label x:Name="label152" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Aug1800 }"/>
+                    </Frame>
+                    <Frame x:Name="data153" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="9"  Grid.Row="13">
+                        <Label x:Name="label153" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Sep1800 }"/>
+                    </Frame>
+                    <Frame x:Name="data154" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="10"  Grid.Row="13">
+                        <Label x:Name="label154" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Oct1800 }"/>
+                    </Frame>
+                    <Frame x:Name="data155" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="11"  Grid.Row="13">
+                        <Label x:Name="label155" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Nov1800 }"/>
+                    </Frame>
+                    <Frame x:Name="data156" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="12"  Grid.Row="13">
+                        <Label x:Name="label156" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Dec1800 }"/>
+                    </Frame>
+                    <!--#endregion-->
+
+                    <!--1900-->
+                    <!--#region NewRegion -->
+                    <Frame  Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="14">
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="1900"/>
+                    </Frame>
+                    <Frame x:Name="data157" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="1"  Grid.Row="14">
+                        <Label x:Name="label157" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jan1900 }"/>
+                    </Frame>
+                    <Frame x:Name="data158" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="2"  Grid.Row="14">
+                        <Label x:Name="label158" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Feb1900 }"/>
+                    </Frame>
+                    <Frame x:Name="data159" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="3"  Grid.Row="14">
+                        <Label x:Name="label159" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Mar1900 }"/>
+                    </Frame>
+                    <Frame x:Name="data160" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="4"  Grid.Row="14">
+                        <Label x:Name="label160" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Apr1900 }"/>
+                    </Frame>
+                    <Frame x:Name="data161" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="5"  Grid.Row="14">
+                        <Label x:Name="label161" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.May1900 }"/>
+                    </Frame>
+                    <Frame x:Name="data162" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="6"  Grid.Row="14">
+                        <Label x:Name="label162" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jun1900 }"/>
+                    </Frame>
+                    <Frame x:Name="data163" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="7"  Grid.Row="14">
+                        <Label x:Name="label163" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jul1900 }"/>
+                    </Frame>
+                    <Frame x:Name="data164" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="8"  Grid.Row="14">
+                        <Label x:Name="label164" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Aug1900 }"/>
+                    </Frame>
+                    <Frame x:Name="data165" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="9"  Grid.Row="14">
+                        <Label x:Name="label165" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Sep1900 }"/>
+                    </Frame>
+                    <Frame x:Name="data166" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="10"  Grid.Row="14">
+                        <Label x:Name="label166" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Oct1900 }"/>
+                    </Frame>
+                    <Frame x:Name="data167" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="11"  Grid.Row="14">
+                        <Label x:Name="label167" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Nov1900 }"/>
+                    </Frame>
+                    <Frame x:Name="data168" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="12"  Grid.Row="14">
+                        <Label x:Name="label168" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Dec1900 }"/>
+                    </Frame>
+                    <!--#endregion-->
+
+                    <!--2000-->
+                    <!--#region NewRegion -->
+                    <Frame  Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="15">
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="2000"/>
+                    </Frame>
+                    <Frame x:Name="data169" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="1"  Grid.Row="15">
+                        <Label x:Name="label169" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jan2000 }"/>
+                    </Frame>
+                    <Frame x:Name="data170" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="2"  Grid.Row="15">
+                        <Label x:Name="label170" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Feb2000 }"/>
+                    </Frame>
+                    <Frame x:Name="data171" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="3"  Grid.Row="15">
+                        <Label x:Name="label171" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Mar2000 }"/>
+                    </Frame>
+                    <Frame x:Name="data172" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="4"  Grid.Row="15">
+                        <Label x:Name="label172" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Apr2000 }"/>
+                    </Frame>
+                    <Frame x:Name="data173" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="5"  Grid.Row="15">
+                        <Label x:Name="label173" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.May2000 }"/>
+                    </Frame>
+                    <Frame x:Name="data174" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="6"  Grid.Row="15">
+                        <Label x:Name="label174" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jun2000 }"/>
+                    </Frame>
+                    <Frame x:Name="data175" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="7"  Grid.Row="15">
+                        <Label x:Name="label175" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Jul2000 }"/>
+                    </Frame>
+                    <Frame x:Name="data176" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="8"  Grid.Row="15">
+                        <Label x:Name="label176" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Aug2000 }"/>
+                    </Frame>
+                    <Frame x:Name="data177" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="9"  Grid.Row="15">
+                        <Label x:Name="label177" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Sep2000 }"/>
+                    </Frame>
+                    <Frame x:Name="data178" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="10"  Grid.Row="15">
+                        <Label x:Name="label178" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Oct2000 }"/>
+                    </Frame>
+                    <Frame x:Name="data179" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="11"  Grid.Row="15">
+                        <Label x:Name="label179" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Nov2000 }"/>
+                    </Frame>
+                    <Frame x:Name="data180" Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="12"  Grid.Row="15">
+                        <Label x:Name="label180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Dec2000 }"/>
+                    </Frame>
+                    <!--#endregion-->
+
+
+
+
+
+
 
 
                 </Grid>
             </VerticalStackLayout>
             <Button Text="Back" Command="{Binding GoBackCommand}" WidthRequest="100" HorizontalOptions="Start" Style="{StaticResource ButtonOutline}"></Button>
             <Button Text="change" Clicked="Button_Clicked" WidthRequest="100" HorizontalOptions="Start" Style="{StaticResource ButtonOutline}"></Button>
-           
         </VerticalStackLayout>
+
+
     </ScrollView>
     
     
