@@ -1,30 +1,4 @@
 ﻿
-/* Unmerged change from project 'Solar_Power_Lookup_Maui (net6.0-windows10.0.19041.0)'
-Before:
-using System.Collections.ObjectModel;
-using Solar_Power_Lookup_Maui.Model;
-After:
-using Solar_Power_Lookup_Maui.Model;
-using System.Collections.ObjectModel;
-*/
-
-/* Unmerged change from project 'Solar_Power_Lookup_Maui (net6.0-maccatalyst)'
-Before:
-using System.Collections.ObjectModel;
-using Solar_Power_Lookup_Maui.Model;
-After:
-using Solar_Power_Lookup_Maui.Model;
-using System.Collections.ObjectModel;
-*/
-
-/* Unmerged change from project 'Solar_Power_Lookup_Maui (net6.0-ios)'
-Before:
-using System.Collections.ObjectModel;
-using Solar_Power_Lookup_Maui.Model;
-After:
-using Solar_Power_Lookup_Maui.Model;
-using System.Collections.ObjectModel;
-*/
 namespace Solar_Power_Lookup_Maui.Views
 {
     public partial class SolarDataMain : BaseViewModel
@@ -68,7 +42,7 @@ namespace Solar_Power_Lookup_Maui.Views
                 {
                     if (!dict.ContainsKey(sol.State))
                     {
-     
+
                         dict.Add(sol.State, sol.State);
                         solarmodel_observablecollection.Add(sol);
 

@@ -24,6 +24,7 @@
     </Shell.Resources>
 
     <ShellContent
+        FlexLayout.AlignSelf="Auto"
         Shell.NavBarIsVisible="True"
         Title="Solar Lookup"
         ContentTemplate="{DataTemplate local:MainPage}"

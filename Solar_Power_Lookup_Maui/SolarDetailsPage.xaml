@@ -2,14 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Solar_Power_Lookup_Maui.SolarDetailsPage"
-             Title="SolarDetailsPage"
+             Title="Solar Power Available"
+
 
              BackgroundColor="LightGray">
 
 
-    <ScrollView  Orientation="Both" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-        <VerticalStackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <VerticalStackLayout Padding="10" Spacing="10"  >
+
+    <StackLayout>
+        <ScrollView  Orientation="Both" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Always">
+            <StackLayout Padding="10" Spacing="10" >
                 
                 <Grid ColumnDefinitions="auto,350,105,105" RowDefinitions="25,25" Margin="0" >
                     <Frame Margin="0,0,0,0" Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="0" WidthRequest="100" >
@@ -30,13 +32,18 @@
 
                     <Frame Grid.Row="1" Grid.ColumnSpan="4" Style="{StaticResource CardView}">
                         <Label HorizontalTextAlignment="Center"  Style="{StaticResource MediumLabel}"  Text="Power in Watts per Meter Squared, Horizontal Orientation"/>
+                        
                     </Frame>
                     
                 </Grid>
 
-               
+
                 
-                <Grid ColumnDefinitions="50,50,50,50,50,50,50,50,50,50,50,50,50" RowDefinitions="25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25" Padding="5">
+                <Grid ColumnDefinitions="50,50,50,50,50,50,50,50,50,50,50,50,50"
+                      RowDefinitions="25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25" 
+                      Padding="5">
+                    
+                    
                     <!--MONTH LAYOUT-->
                     <!--#region NewRegion -->
                  
@@ -251,7 +258,6 @@
                         <Label x:Name="label48" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Dec0900 }"/>
                     </Frame>
                     <!--#endregion-->
-
 
                     <!--1000-->
                     <!--#region NewRegion -->
@@ -468,7 +474,6 @@
                         <Label x:Name="label108" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.Dec1400 }"/>
                     </Frame>
                     <!--#endregion-->
-
 
                     <!--1500-->
                     <!--#region NewRegion -->
@@ -728,21 +733,12 @@
                     </Frame>
                     <!--#endregion-->
 
-
-
-
-
-
-
-
                 </Grid>
-            </VerticalStackLayout>
-            <Button Text="Back" Command="{Binding GoBackCommand}" WidthRequest="100" HorizontalOptions="Start" Style="{StaticResource ButtonOutline}"></Button>
-            <Button Text="change" Clicked="Button_Clicked" WidthRequest="100" HorizontalOptions="Start" Style="{StaticResource ButtonOutline}"></Button>
-        </VerticalStackLayout>
-
-
-    </ScrollView>
-    
+                <Button Text="Back" Command="{Binding GoBackCommand}" WidthRequest="100" HorizontalOptions="Start" Style="{StaticResource ButtonOutline}"></Button>
+                <Button Text="change" Clicked="Button_Clicked" WidthRequest="100" HorizontalOptions="Start" Style="{StaticResource ButtonOutline}"></Button>
+            </StackLayout>
+            
+        </ScrollView>
+    </StackLayout>
     
 </ContentPage>
