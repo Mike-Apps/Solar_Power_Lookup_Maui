@@ -14,22 +14,29 @@
         ColumnSpacing="5"
         RowDefinitions="*,Auto"
         RowSpacing="0">
-        <RefreshView
+        
+        <StackLayout>
+            <Label HorizontalOptions="Center" FontSize="Medium">Select State, then City</Label>
+        <RefreshView 
             Command="{Binding GetStatesCommand}"
             IsRefreshing="{Binding IsRefreshing}">
             <CollectionView 
                 ItemsSource="{Binding solarmodel_observablecollection}"
                 SelectionMode="None">
-                <CollectionView.ItemTemplate>
+                <CollectionView.ItemTemplate >
                     <DataTemplate x:DataType="model:SolarModel">
+                        
                         <Grid Padding="10">
+                            
                             <Frame HeightRequest="60" Style="{StaticResource CardView}">
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer 
                                         Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:BaseViewModel}}, Path=GetCityCommand}"
                                         CommandParameter="{Binding .}"/>
                                 </Frame.GestureRecognizers>
+                               
                                 <Grid Padding="0" ColumnDefinitions="*" >
+                                    
                                     <VerticalStackLayout
                                         Grid.Column="0"
                                         Padding="15">
@@ -42,9 +49,10 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </RefreshView>
+        </StackLayout>
 
-
-        <RefreshView             
+            
+        <RefreshView            
             Command="{Binding GetCityCommand}"
             IsRefreshing="{Binding IsRefreshing}"
             Grid.Column="1">
@@ -72,12 +80,11 @@
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
-                
             </CollectionView>
-            
         </RefreshView>
+       
 
-        
+
 
         <!--<Button Text="Refresh States" 
                 Command="{Binding GetStatesCommand}"

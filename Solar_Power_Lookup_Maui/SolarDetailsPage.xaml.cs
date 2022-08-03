@@ -2,8 +2,9 @@ namespace Solar_Power_Lookup_Maui;
 
 public partial class SolarDetailsPage : ContentPage
 {
-
-
+    static int numberOfLabels = 180;
+    static int high = 0;
+       
     public SolarDetailsPage(SolarDetailsViewModel viewModel)
     {
 
@@ -16,9 +17,6 @@ public partial class SolarDetailsPage : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-
-        int high = 0;
-        int numberOfLabels = 180;
 
         for (int i = 1; i <= numberOfLabels; i++)
         {
@@ -38,7 +36,6 @@ public partial class SolarDetailsPage : ContentPage
 
     // change background colors of Labels based on the highest recorded power measurement
     //use to frameLabel to access each frame
-
     private void ChangeColor(int numberOfLabels, int high)
     {
         for (int i = 1; i <= numberOfLabels; i++)
