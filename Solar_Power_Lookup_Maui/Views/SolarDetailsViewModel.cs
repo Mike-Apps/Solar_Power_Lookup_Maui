@@ -1,8 +1,11 @@
-﻿namespace Solar_Power_Lookup_Maui.Views
+﻿using System.ComponentModel;
+
+namespace Solar_Power_Lookup_Maui.Views
 {
     [QueryProperty(nameof(SolarModel), "SolarModel")]
-    public partial class SolarDetailsViewModel : BaseViewModel
+    public partial class SolarDetailsViewModel : BaseViewModel 
     {
+
         public SolarDetailsViewModel()
         {
 

@@ -3,15 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Solar_Power_Lookup_Maui.SolarDetailsPage"
              Title="Solar Power Available"
-
-
              BackgroundColor="LightGray">
 
 
 
-    <StackLayout>
-        <ScrollView  Orientation="Both" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Always">
-            <StackLayout Padding="10" Spacing="10" >
+    <ScrollView x:Name="scrview" >
+            <VerticalStackLayout Padding="10" Spacing="10" >
                 
                 <Grid ColumnDefinitions="auto,350,105,105" RowDefinitions="25,25" Margin="0" >
                     <Frame Margin="0,0,0,0" Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="0" WidthRequest="100" >
@@ -36,7 +33,6 @@
                     </Frame>
                     
                 </Grid>
-
 
                 
                 <Grid ColumnDefinitions="50,50,50,50,50,50,50,50,50,50,50,50,50"
@@ -736,9 +732,9 @@
                 </Grid>
                 <Button Text="Back" Command="{Binding GoBackCommand}" WidthRequest="100" HorizontalOptions="Start" Style="{StaticResource ButtonOutline}"></Button>
                 <Button Text="change" Clicked="Button_Clicked" WidthRequest="100" HorizontalOptions="Start" Style="{StaticResource ButtonOutline}"></Button>
-            </StackLayout>
+            </VerticalStackLayout>
             
         </ScrollView>
-    </StackLayout>
+   
     
 </ContentPage>

@@ -1,19 +1,50 @@
+using Microsoft.Maui.Controls;
+using System.ComponentModel;
+
 namespace Solar_Power_Lookup_Maui;
 
-public partial class SolarDetailsPage : ContentPage
+
+public partial class SolarDetailsPage : ContentPage 
 {
     static int numberOfLabels = 180;
     static int high = 0;
-       
-    public SolarDetailsPage(SolarDetailsViewModel viewModel)
-    {
 
+    public SolarDetailsPage(SolarDetailsViewModel viewModel )
+    {
+        
         InitializeComponent();
         BindingContext = viewModel;
+        //this calls function after page is loaded.  Initially sets the scroll to horizontal.
+        Loaded += (s, e) => { SetInitialOrientation(); };
+        DeviceDisplay.MainDisplayInfoChanged += DeviceDisplay_MainDisplayInfoChanged1;
 
-        //this calls function after page is loaded.
-        // Loaded += (s, e) => { But(); };
     }
+   
+
+    private void SetInitialOrientation()
+    {
+        if (DeviceDisplay.MainDisplayInfo.Orientation == DisplayOrientation.Landscape)
+        {
+            scrview.Orientation = ScrollOrientation.Vertical;
+        }
+        else
+        {
+            scrview.Orientation = ScrollOrientation.Horizontal;
+        }
+    }
+
+    private void DeviceDisplay_MainDisplayInfoChanged1(object sender, DisplayInfoChangedEventArgs e)
+    {
+        if (e.DisplayInfo.Orientation == DisplayOrientation.Landscape)
+        {
+            scrview.Orientation = ScrollOrientation.Horizontal;
+        }
+        else
+        {
+            scrview.Orientation = ScrollOrientation.Vertical;
+        }
+    }
+
 
     private void Button_Clicked(object sender, EventArgs e)
     {
@@ -87,4 +118,6 @@ public partial class SolarDetailsPage : ContentPage
         }
 
     }
+
+
 }

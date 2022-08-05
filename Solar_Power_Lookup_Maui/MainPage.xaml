@@ -9,15 +9,18 @@
              xmlns:model="clr-namespace:Solar_Power_Lookup_Maui.Model"
              xmlns:viewmodel ="clr-namespace:Solar_Power_Lookup_Maui.Views">
 
+    <Grid>
+        <StackLayout>
+            <Label Text="Select State, then City" FontSize="Large" ></Label>
     <Grid
         ColumnDefinitions="*,3*"
         ColumnSpacing="5"
         RowDefinitions="*,Auto"
         RowSpacing="0">
-        
         <StackLayout>
-            <Label HorizontalOptions="Center" FontSize="Medium">Select State, then City</Label>
-        <RefreshView 
+          
+
+            <RefreshView 
             Command="{Binding GetStatesCommand}"
             IsRefreshing="{Binding IsRefreshing}">
             <CollectionView 
@@ -50,8 +53,9 @@
             </CollectionView>
         </RefreshView>
         </StackLayout>
+  
 
-            
+
         <RefreshView            
             Command="{Binding GetCityCommand}"
             IsRefreshing="{Binding IsRefreshing}"
@@ -112,6 +116,8 @@
             IsVisible="{Binding IsRefreshing}"
             VerticalOptions="CenterAndExpand" />
 
+    </Grid>
+        </StackLayout>
     </Grid>
 
 
