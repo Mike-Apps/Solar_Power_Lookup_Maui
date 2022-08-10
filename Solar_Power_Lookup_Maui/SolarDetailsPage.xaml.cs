@@ -14,9 +14,17 @@ public partial class SolarDetailsPage : ContentPage
         
         InitializeComponent();
         BindingContext = viewModel;
+
         //this calls function after page is loaded.  Initially sets the scroll to horizontal.
         Loaded += (s, e) => { SetInitialOrientation(); };
+
+        //Event (screen orientation change) => call DeviceDisplay...Method
         DeviceDisplay.MainDisplayInfoChanged += DeviceDisplay_MainDisplayInfoChanged1;
+
+        //determines highest solar availability in a city.  Used to calculate percentages and determine background colors
+        Loaded += (s, e) => { DetermineHighCount(); };
+
+        Instructions.Text = "To use this data, multiply your solar panel's efficiency (Example: 20% efficiency = .2) by the numbers above.  I will be adding that feature in at a later time.";
 
     }
    
@@ -37,18 +45,18 @@ public partial class SolarDetailsPage : ContentPage
     {
         if (e.DisplayInfo.Orientation == DisplayOrientation.Landscape)
         {
-            scrview.Orientation = ScrollOrientation.Horizontal;
+            scrview.Orientation = ScrollOrientation.Vertical;
         }
         else
         {
-            scrview.Orientation = ScrollOrientation.Vertical;
+            scrview.Orientation = ScrollOrientation.Horizontal;
         }
     }
 
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private void DetermineHighCount()
     {
-
+        high = 0;
         for (int i = 1; i <= numberOfLabels; i++)
         {
             //use textLabel to access each Label
