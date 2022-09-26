@@ -10,7 +10,7 @@
     <ScrollView x:Name="scrview" >
             <VerticalStackLayout Padding="10" Spacing="10" >
                 
-                <Grid ColumnDefinitions="auto,350,105,105" RowDefinitions="25,25" Margin="0" >
+                <Grid ColumnDefinitions="auto,350,105,105" RowDefinitions="25" Margin="0" >
                     <Frame Margin="0,0,0,0" Style="{StaticResource CardView}" Grid.Column="0"  Grid.Row="0" WidthRequest="100" >
                         <Label  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.State }" WidthRequest="100"/>
                     </Frame>
@@ -26,13 +26,26 @@
                     <Frame  Margin="0,0,0,0" Style="{StaticResource CardView}" Grid.Column="3"  Grid.Row="0">
                         <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.lon, StringFormat='Long:  {0}'}"/>
                     </Frame>
-
-                    <Frame Grid.Row="1" Grid.ColumnSpan="4" Style="{StaticResource CardView}">
-                        <Label HorizontalTextAlignment="Center"  Style="{StaticResource MediumLabel}"  Text="Power in Watts per Meter Squared, Horizontal Orientation"/>
-                        
-                    </Frame>
                     
                 </Grid>
+
+
+            <!--<Grid>
+            <HorizontalStackLayout Spacing="10" >
+                    <Frame WidthRequest="75" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="BlanchedAlmond" CornerRadius="5" IsClippedToBounds="True" Padding="0" >
+                        <Label WidthRequest="75" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center" Text="Array Size:"></Label>
+                </Frame>
+                    <Entry x:Name="ArraySize" Background="Aqua" WidthRequest="75" Placeholder="1000"></Entry>
+
+                    <Frame WidthRequest="100" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="BlanchedAlmond" CornerRadius="5" IsClippedToBounds="True" Padding="0" >
+                        <Label WidthRequest="100" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center" Text="Panel Efficiency"></Label>
+                    </Frame>
+                    <Entry x:Name="PanelEfficiency" Background="Aqua" WidthRequest="75" Placeholder="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Entry>
+                    <Button Text="Calculate" Clicked="Button_Clicked"  WidthRequest="100" HorizontalOptions="Start" Style="{StaticResource ButtonOutline}"></Button>
+                    <Button Text="Calculate" Clicked="Button_Clicked_1" WidthRequest="100" HorizontalOptions="Start" Style="{StaticResource ButtonOutline}"></Button>
+
+                </HorizontalStackLayout>
+            </Grid>-->
 
                 
                 <Grid ColumnDefinitions="50,50,50,50,50,50,50,50,50,50,50,50,50"
@@ -736,41 +749,41 @@
                 </Frame>
      
                 <Frame  Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="1"  Grid.Row="16">
-                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.JanAverage }"/>
+                    <Label x:Name="DayAvg1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.JanAverage }"/>
                 </Frame>
                 <Frame  Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="2"  Grid.Row="16">
-                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.FebAverage }"/>
+                    <Label  x:Name="DayAvg2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.FebAverage }"/>
                 </Frame>
                 <Frame  Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="3"  Grid.Row="16">
-                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.MarAverage }"/>
+                    <Label x:Name="DayAvg3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.MarAverage }"/>
                 </Frame>
                 <Frame  Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="4"  Grid.Row="16">
-                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.AprAverage }"/>
+                    <Label x:Name="DayAvg4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.AprAverage }"/>
                 </Frame>
                 <Frame  Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="5"  Grid.Row="16">
-                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.MayAverage }"/>
+                    <Label x:Name="DayAvg5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.MayAverage }"/>
                 </Frame>
 
                 <Frame  Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="6"  Grid.Row="16">
-                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.JunAverage }"/>
+                    <Label x:Name="DayAvg6" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.JunAverage }"/>
                 </Frame>
                 <Frame  Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="7"  Grid.Row="16">
-                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.JulAverage }"/>
+                    <Label x:Name="DayAvg7" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.JulAverage }"/>
                 </Frame>
                 <Frame  Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="8"  Grid.Row="16">
-                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.AugAverage }"/>
+                    <Label x:Name="DayAvg8" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.AugAverage }"/>
                 </Frame>
                 <Frame  Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="9"  Grid.Row="16">
-                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.SepAverage }"/>
+                    <Label x:Name="DayAvg9" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.SepAverage }"/>
                 </Frame>
                 <Frame  Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="10"  Grid.Row="16">
-                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.OctAverage }"/>
+                    <Label x:Name="DayAvg10" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.OctAverage }"/>
                 </Frame>
                 <Frame  Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="11"  Grid.Row="16">
-                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.NovAverage }"/>
+                    <Label x:Name="DayAvg11" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.NovAverage }"/>
                 </Frame>
                 <Frame  Margin="2,0,0,2" Style="{StaticResource CardView}" Grid.Column="12"  Grid.Row="16">
-                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.DecAverage }"/>
+                    <Label x:Name="DayAvg12" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource SmallLabel}" Text="{Binding SolarModel.DecAverage }"/>
                 </Frame>
                 <!--#endregion-->
 
@@ -778,6 +791,7 @@
             </Grid>
             <Label x:Name="Instructions"></Label>
             <Button Text="Back" Command="{Binding GoBackCommand}" WidthRequest="100" HorizontalOptions="Start" Style="{StaticResource ButtonOutline}"></Button>
+           
         </VerticalStackLayout>
             
         </ScrollView>

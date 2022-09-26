@@ -24,7 +24,7 @@ public partial class SolarDetailsPage : ContentPage
         //determines highest solar availability in a city.  Used to calculate percentages and determine background colors
         Loaded += (s, e) => { DetermineHighCount(); };
 
-        Instructions.Text = "To use this data, multiply your solar panel's efficiency (Example: 20% efficiency = .2) by the numbers above.  I will be adding that feature in at a later time.";
+        Instructions.Text = "For every 1000 Watts of solar panels you install, you can expect to receive this much power.\nA 2000 Watt system will produce double etc...";
 
     }
    
@@ -71,6 +71,7 @@ public partial class SolarDetailsPage : ContentPage
         }
 
         ChangeColor(numberOfLabels, high);
+        
     }
 
     // change background colors of Labels based on the highest recorded power measurement
@@ -122,6 +123,53 @@ public partial class SolarDetailsPage : ContentPage
             {
                 frame.Background = Color.FromRgba("#ff1a1a");
             }
+
+        }
+
+        CalculatePower();
+
+    }
+
+
+    public void CalculatePower()
+    {
+        double panelPercent = 20;
+        
+        double sizeOfPanelArray = 1000;
+
+        //calculate the hourly averages
+        for (int i = 1; i <= numberOfLabels; i++)
+        {
+            string textLabel = string.Format($"label{i}");
+            Label txtLabel = (Label)this.FindByName(textLabel);
+
+            double textLabelValuedouble = Convert.ToInt32(txtLabel.Text);
+            textLabelValuedouble = textLabelValuedouble * (panelPercent/100) * 0.7 * 0.8;
+
+            double coefficient = (textLabelValuedouble / 150);
+            double usablePower = (sizeOfPanelArray * coefficient);
+
+            int textLabelValueInt = Convert.ToInt32(usablePower);
+
+            txtLabel.Text = textLabelValueInt.ToString();
+
+        }
+        
+        //calculate the daily averages
+        for (int i = 1; i <= 12; i++)
+        {
+            string textLabel = string.Format($"DayAvg{i}");
+            Label txtLabel = (Label)this.FindByName(textLabel);
+
+            double textLabelValuedouble = Convert.ToInt32(txtLabel.Text);
+            textLabelValuedouble = textLabelValuedouble * (panelPercent / 100) * 0.7 * 0.8;
+
+            double coefficient = (textLabelValuedouble / 150);
+            double usablePower = (sizeOfPanelArray * coefficient);
+
+            int textLabelValueInt = Convert.ToInt32(usablePower);
+
+            txtLabel.Text = textLabelValueInt.ToString();
 
         }
 

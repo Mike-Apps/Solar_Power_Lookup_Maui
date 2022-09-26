@@ -8,12 +8,12 @@ namespace Solar_Power_Lookup_Maui.Views
         public ObservableCollection<SolarModel> solarcity_observablecollection { get; } = new();
 
         SolarServices solarServices;
-        SolarServices solarCity;
+       
 
-        public SolarDataMain(SolarServices solarServices, SolarServices solarCity)
+        public SolarDataMain(SolarServices solarServices)
         {
             this.solarServices = solarServices;
-            this.solarCity = solarCity;
+           
         }
 
         [ObservableProperty]
@@ -45,7 +45,6 @@ namespace Solar_Power_Lookup_Maui.Views
 
                         dict.Add(sol.State, sol.State);
                         solarmodel_observablecollection.Add(sol);
-
                     }
                 }
             }
@@ -57,8 +56,6 @@ namespace Solar_Power_Lookup_Maui.Views
             {
                 IsBusy = false;
                 IsRefreshing = false;
-
-
             }
         }
 
